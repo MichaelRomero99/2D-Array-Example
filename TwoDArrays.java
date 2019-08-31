@@ -1,20 +1,17 @@
-package Integer;
 
-public class TwoDArrays {
-	
-	private int [][] arrayInts;
-	
-
+public class TwoDArray {
+private int [][] arrayInts;
     /**
      * Constructor for objects of class Util2DInteger
      * @param array to array
      */
 	
-    public TwoDArrays(int [][] arrayInts)
+    public TwoDArray(int[][] array)
     {
-        this.arrayInts = arrayInts;
+        this.arrayInts = array;
     }
-   
+    
+
     /**
      * Gets the largest integer in the array
      * @return the largest number in the array
@@ -24,7 +21,7 @@ public class TwoDArrays {
         int largest = arrayInts[0][0];//smallest int possible
         for(int a = 0; a < arrayInts.length; a++)
         {
-            for(int b = 0; b < arrayInts.length; b++)
+            for(int b = 0; b < arrayInts[0].length; b++)
             {
                 if(arrayInts[a][b] > largest)
                 {
@@ -82,4 +79,23 @@ public class TwoDArrays {
         }
         return check;
     }
+    public static void main(String[] args)
+    {
+    	int[][] twoDArray = new int[3][3];
+    	twoDArray[0][0] = 4;
+    	twoDArray[0][1] = 21;
+    	twoDArray[0][2] = 13;
+    	twoDArray[1][0] = 48;
+    	twoDArray[1][1] = 52;
+    	twoDArray[1][2] = 67;
+    	twoDArray[2][0] = 17;
+    	twoDArray[2][1] = 81;
+    	twoDArray[2][2] = 74;
+    	TwoDArray list = new TwoDArray(twoDArray);
+    	System.out.println("Total product of 2D Array"+list.product());
+    	System.out.println(list.contains(100));
+    	System.out.println("The last element in the 2D Array"+list.lastElement());
+    	System.out.println("Largest Number in the 2D Array"+list.getLargest());
+    }
+    
 }
