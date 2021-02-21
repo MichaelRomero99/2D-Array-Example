@@ -6,9 +6,9 @@ private int [][] arrayInts;
      * @param array to array
      */
 	
-    public TwoDArray(int[][] array)
+    public TwoDArray(int[][] arrays)
     {
-        this.arrayInts = array;
+        this.arrayInts = arrays;
     }
     
 
